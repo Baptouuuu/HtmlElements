@@ -1,3 +1,11 @@
 {
-
+    "require": {
+        "symfony/dependency-injection": "*",
+        "symfony/yaml": "*",
+        "symfony/config": "*",
+        "symfony/proxy-manager-bridge": "*"
+    },
+    "autoload": {
+        "psr-0": {"HE\\": "src/"}
+    }
 }
