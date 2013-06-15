@@ -2,12 +2,19 @@
 
 namespace HE\Html\Element;
 
-class Input extends Generic
+use HE\Html\Element\ElementInterface;
+
+class Input extends Generic implements ElementInterface
 {
 
     public function render()
     {
-        return '<input id="'.$this->getAttribute('id').'" />';
+        return '<input '.$this->getId().' '.
+            $this->getClass().' '.
+            'type="'.$this->getType().'"'.
+            'name="'.$this->getName().'" '.
+            'value="'.htmlspecialchars($this->getValue()).'" '.
+            ' />';
     }
 
 }
