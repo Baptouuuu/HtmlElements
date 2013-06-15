@@ -1,0 +1,4 @@
+services:
+    html-elements:
+        class: HE\Html\Factory
+        arguments: []
